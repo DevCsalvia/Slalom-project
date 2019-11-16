@@ -1,6 +1,44 @@
 body{
 	font-family: $font-primary;
-	color: $color-grey-dark-2;
+	color: $color-black;
 	font-weight: 300;
 	line-height: 1.6;
+}
+
+//Headers and paragraphs styling
+.heading-primary{
+	font-size: 3.5rem;
+	font-weight: 700;
+	backface-visibility: hidden; /*убирает маленький рывок после анимации */
+}
+
+.heading-secondary{
+	font-size: 2.5rem;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: inline-block;
+	letter-spacing: .2rem;
+	transition: all .2s;
+}
+
+.heading-tertiary {
+	font-size: $default-font-size;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.paragraph {
+	font-size: $default-font-size;
+
+	&:not(:last-child){
+		margin-bottom: 3rem;
+	}
+}
+
+
+
+//////////////////////////////////
+
+.header__seenon-text{
+	font-size: 1.4rem;
 }

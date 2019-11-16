@@ -1,18 +1,10 @@
-$color-primary: #042f4b;
-$color-primary-light: lighten(#042f4b, 10%);
-$color-primary-dark: darken(#042f4b, 10%);
+$color-primary:  #c69963;
+$color-primary-light: #F6B352;
+$color-primary-dark: #B28451;
 
-$color-secondary: #fff6da;
-$color-primary-light: lighten(#fff6da, 10%);
-$color-primary-dark: darken(#fff6da, 10%);
-
-$color-teritary: #fbc99d;
-$color-primary-light: lighten(#fbc99d, 10%);
-$color-primary-dark: darken(#fbc99d, 10%);
-
-$color-extra: #ed1250;
-$color-primary-light: lighten(#fff6da, 10%);
-$color-primary-dark: darken(#fff6da, 10%);
+$color-secondary:  #191F59;
+$color-secondary-light: lighten( #191F59, 10%);
+$color-secondary-dark: darken( #191F59, 10%);
 
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
@@ -26,9 +18,19 @@ $color-black: #000;
 
 // FONT
 $default-font-size: 1.6rem;
+$medium-font-size: 1.8rem;
+$large-font-size: 2.4rem;
+$largest-font-size: 5rem;
 
 //Border-radius
 $border-radius-primary: 3px;
 
 // FONT VARIABLES
 $font-primary: 'Lora', sans-serif;
+
+//DEFAULT SHADOW
+$primary-shadow: 2px 5px 10px rgba($color-black, .3);
+$primary-shadow-light: 2px 7px 5px rgba($color-black, .1);
+
+//Grid gap
+$row-gap: 3rem;

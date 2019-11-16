@@ -1,0 +1,23 @@
+.section-work{
+	background-color: $color-grey-light-1;
+	color: $color-secondary;
+	padding: 7rem 0;
+
+	&__heading{
+		font-size: $large-font-size;
+		color: $color-primary;
+		grid-column: col-start 2 / col-end 10;
+	}
+
+	&__text{
+		grid-column: col-start 2 / col-end 10;
+		font-size: $largest-font-size;
+		font-weight: 400;
+	}
+
+	&__btn{
+		grid-column: col-start 2 / col-end 3;
+	}
+
+
+}

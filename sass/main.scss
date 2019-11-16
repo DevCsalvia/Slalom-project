@@ -6,6 +6,10 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/button";
+
+@import "layout/header";
 @import "layout/navigation";
+@import "layout/work";
 
 @import "pages/home";

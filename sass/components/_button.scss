@@ -1,0 +1,75 @@
+/* ~~~~~~~ INIT. BTN ~~~~~~~ */
+
+.btn {    
+  position: relative; 
+  padding: 1.6rem 0;
+  //padding-right: 3.3rem;
+  font-size: $default-font-size;
+  letter-spacing: .4rem;
+  outline: none;
+  border: none;
+  color: $color-grey-dark-3;
+  text-transform: uppercase;
+  transition: all .6s cubic-bezier(0.77, 0, 0.175, 1);  
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border-radius: .8rem;
+  overflow: hidden;
+  z-index: 1;
+
+
+  &::before,
+  &::after{
+    content: "";
+    position: absolute; 
+    transition: inherit;
+    z-index: -1;
+    border-radius: .8rem;
+  }
+
+  &::before{
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    border: 2px solid $color-primary;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  &::after{
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background-color: $color-primary;
+  }
+  
+  &:hover{
+    color: $color-secondary;
+    transition-delay: .6s;
+  }
+
+  &-arrow{
+    transition: all .3s;
+  }
+
+  &:hover &-arrow{
+    margin-left: .7rem;
+  }
+
+  &:hover::before{ 
+    left: 0;
+    width: 100%;
+    transition-delay: 0s;
+  }
+
+  &:hover::after{
+    top: 0;
+    height: 100%;
+    background-color: $color-primary;
+    transition-delay: .4s;
+  }
+
+}

@@ -1,0 +1,106 @@
+.header{
+	background-image: linear-gradient(to right bottom, 
+		rgba($color-secondary-light, 0.7),
+		rgba($color-secondary-dark, 0.7)), url(../img/header.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	//parallax
+	background-attachment: fixed;
+	
+	display: grid;
+	grid-template-columns: minmax(6rem, 1fr) [center-start]
+						   repeat(10, [col-start] minmax(min-content, 11.4rem)
+						   [col-end]) [center-end] minmax(6rem, 1fr);
+	grid-template-rows: [text-start] minmax(max-content, 80%) [text-end logo-start] minmax(min-content, 20%) [logo-end];
+	justify-items: center;
+	align-items: center;
+
+	//centering content in the header
+	/*display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;*/
+
+	&__text{
+		margin-top: -8rem;
+		grid-row: text-start / text-end;
+		grid-column: center-start / center-end;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__heading-1{
+		font-size: 6rem;
+		font-weight: 700;
+		font-style: italic;
+		margin-top: 4rem;
+		color: $color-grey-light-2;
+		margin-left: 10%;
+
+	//animation appear from bottom
+	animation: moveInBottom .5s ease-out .75s; /*.75 задержка*/
+		animation-fill-mode: backwards; 
+
+
+	}
+
+	&__heading-2{
+		align-self: flex-end;
+		margin-right: 10%;
+		margin-top: -2rem;
+		color: $color-grey-light-2;
+	//animation appear from right
+	animation: moveInRight .5s ease-out .75s; /*.75 задержка*/
+		animation-fill-mode: backwards; 
+	}
+
+	&__seenon-text{
+		grid-column: col-start 2 / col-end 9;
+		grid-row: logo-start / logo-end;
+		
+		justify-self: stretch;
+		align-self: start;
+
+		display: grid;
+		grid-template-columns: 1fr max-content 1fr;
+		grid-column-gap: 1.5rem;
+		align-items: center;
+
+		color: $color-grey-light-2;
+
+		//animation appear from bottom
+	animation: moveInRight .5s ease-out .75s; /*.75 задержка*/
+		animation-fill-mode: backwards; 
+
+		&::before,
+		&::after{
+			content: "";
+			height: 1px;
+			display: block;
+			background-color: currentColor;
+		}
+	}
+
+	&__seenon-logos{
+		grid-row: logo-start / logo-end;
+		grid-column: col-start 2 / col-end 9;
+		
+		justify-self: stretch;
+
+		display: flex;
+		justify-content: space-around;
+		
+	}
+
+	&__seenon-icon{
+		display: inline-block;
+		width: 7.5rem;
+		height: 7.5rem;
+		fill: $color-grey-light-2;
+
+		//animation appear from left
+	animation: moveInLeft .5s ease-out .75s; /*.75 задержка*/
+		animation-fill-mode: backwards; 
+	}
+}

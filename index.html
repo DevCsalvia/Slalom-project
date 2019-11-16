@@ -12,15 +12,19 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
-	<title>Slalom &mdash; всегда к лучшему</title>
+	<title>Slalom &mdash; совершенство в деталях</title>
 </head>
 <body>
 
 	<div class="container">
+
+<!--Fixed navigation-->		
 		<div class="navigation">
-
-			<img src="img/logo.png" alt="Slalom logo" class="navigation__logo">
-
+			
+			<a href="#" class="navigation__logo">
+				<img src="img/logo.png" alt="Slalom logo">
+			</a>
+			
 			<nav class="navigation__nav">
 				<ul class="navigation__list">
 					<li class="navigation__item"><a href="#" class="navigation__link">Что мы делаем</a></li>
@@ -30,9 +34,12 @@
 					<li class="navigation__item"><a href="#" class="navigation__link">Отзывы</a></li>
 					<li class="navigation__item"><a href="#" class="navigation__link">Давайте пообщаемся</a></li>
 				</ul>
+				<div class="navigation__search">
+					    <svg class="navigation__search-icon">
+                            <use xlink:href="img/symbol-defs.svg#icon-magnifying-glass"></use>
+                        </svg>
+				</div>
 			</nav>
-
-			<span class="navigation__search">Magnifier</span>
 
 			<!--<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
 
@@ -41,14 +48,51 @@
 			</label>-->
 		</div>
 	
-
+<!--Header content-->
 		<header class="header">
-			header content
+			<div class="header__text">
+				<h1 class="heading-primary header__heading-1">Люди покупают не то, что вы создаете, а то, почему вы это создаете</h1>
+				<h2 class="heading-secondary header__heading-2">Саймон Сайнек</h2>
+			</div>
+			
+			<div class="header__seenon-text">Партнёры</div>
+			<div class="header__seenon-logos">
+
+				<div>
+					<svg class="header__seenon-icon">
+                         <use xlink:href="img/symbol-defs.svg#icon-dell"></use>
+               		</svg>
+				</div>
+				 
+				<div>
+					<svg class="header__seenon-icon">
+                        <use xlink:href="img/symbol-defs.svg#icon-huawei"></use>
+              	    <svg>
+				</div>
+				
+				<div>
+					<svg class="header__seenon-icon">
+	                    <use xlink:href="img/symbol-defs.svg#icon-samsung"></use>
+	                </svg>
+				</div>
+				
+				<div>
+					<svg class="header__seenon-icon">
+	                    <use xlink:href="img/symbol-defs.svg#icon-yandex"></use>
+	                </svg>
+				</div>
+			</div>
 		</header>
 		
-		<main>
 			<section class="section-work">
-				Section work
+				<h2 class="section-work__heading heading-secondary">Что мы делаем</h2>
+
+				<p class="section-work__text">Slalom это современная консалтинговая фирма, сосредоточенная на стратегии, технологях и трансформации бизнеса </p>
+
+				<button class="section-work__btn btn from-middle">
+					Learn More <span class="btn-arrow"> &rarr;</span>
+				</button>
+
 			</section>
 
 			<section class="section-about">
@@ -66,7 +110,11 @@
 			<section class="section-reviews">
 				Section reviews
 			</section>
-		</main>
+
+
+		<footer>
+			footer
+		</footer>
 
 	</div>
 </body>
