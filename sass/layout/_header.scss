@@ -9,10 +9,6 @@
 	background-attachment: fixed;
 	
 	display: grid;
-	grid-template-columns: minmax(6rem, 1fr) [center-start]
-						   repeat(10, [col-start] minmax(min-content, 11.4rem)
-						   [col-end]) [center-end] minmax(6rem, 1fr);
-	grid-template-rows: [text-start] minmax(max-content, 80%) [text-end logo-start] minmax(min-content, 20%) [logo-end];
 	justify-items: center;
 	align-items: center;
 
@@ -23,7 +19,7 @@
 	flex-direction: column;*/
 
 	&__text{
-		margin-top: -8rem;
+		//margin-top: -8rem;
 		grid-row: text-start / text-end;
 		grid-column: center-start / center-end;
 		display: flex;
@@ -31,12 +27,12 @@
 	}
 
 	&__heading-1{
-		font-size: 6rem;
+		font-size: 5.4rem;
 		font-weight: 700;
 		font-style: italic;
 		margin-top: 4rem;
 		color: $color-grey-light-2;
-		margin-left: 10%;
+		//margin-left: 10%;
 
 	//animation appear from bottom
 	animation: moveInBottom .5s ease-out .75s; /*.75 задержка*/
@@ -47,7 +43,7 @@
 
 	&__heading-2{
 		align-self: flex-end;
-		margin-right: 10%;
+		//margin-right: 10%;
 		margin-top: -2rem;
 		color: $color-grey-light-2;
 	//animation appear from right
@@ -56,8 +52,8 @@
 	}
 
 	&__seenon-text{
-		grid-column: col-start 2 / col-end 9;
 		grid-row: logo-start / logo-end;
+		grid-column: col-start 1 / col-end 10;
 		
 		justify-self: stretch;
 		align-self: start;
@@ -84,23 +80,23 @@
 
 	&__seenon-logos{
 		grid-row: logo-start / logo-end;
-		grid-column: col-start 2 / col-end 9;
+		grid-column: col-start 1 / col-end 10;
 		
 		justify-self: stretch;
 
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		
 	}
 
 	&__seenon-icon{
 		display: inline-block;
-		width: 7.5rem;
-		height: 7.5rem;
+		width: 8rem;
+		height: 8rem;
 		fill: $color-grey-light-2;
 
 		//animation appear from left
-	animation: moveInLeft .5s ease-out .75s; /*.75 задержка*/
+		animation: moveInLeft .5s ease-out .75s; /*.75 задержка*/
 		animation-fill-mode: backwards; 
 	}
 }

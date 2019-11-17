@@ -1,6 +1,6 @@
 .container{
 	display: grid;
-	grid-template-rows: 8rem [header-start] calc(100vh - 8rem) [header-end work-start] min-content [work-end];
+	grid-template-rows: 8rem [header-start] calc(100vh - 8rem) [header-end work-start] min-content [work-end projects-start] min-content [projects-end];
 	grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start]
 						   repeat(10, [col-start] minmax(min-content, 11.4rem)
 						   [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; 
@@ -9,6 +9,11 @@
 	.header{
 		grid-row: header-start / header-end;
 		grid-column: full-start / full-end;
+
+		grid-template-columns: minmax(6rem, 1fr) [center-start]
+						   repeat(10, [col-start] minmax(min-content, 11.4rem)
+						   [col-end]) [center-end] minmax(6rem, 1fr);
+		grid-template-rows: [text-start] minmax(max-content, 80%) [text-end logo-start] minmax(min-content, 20%) [logo-end];
 	}
 
 	.section-work{
@@ -16,9 +21,17 @@
 		grid-column: full-start / full-end;
 
 		display: grid;
-		grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start]
-						   repeat(10, [col-start] minmax(min-content, 11.4rem)
-						   [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+		grid-template-columns: minmax(6rem, 1fr) [center-start] minmax(min-content, 114rem) [center-end] minmax(6rem, 1fr);
+		justify-items: start;
 		grid-row-gap: $row-gap;
+	}
+
+	.section-projects{
+		grid-row: projects-start / projects-end;
+		grid-column: center-start / center-end;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+		grid-gap: $card-gap;
 	}
 }
