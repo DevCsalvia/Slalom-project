@@ -1,42 +1,175 @@
 body{
 	font-family: $font-primary;
 	color: $color-black;
-	font-weight: 300;
+	font-weight: $smallest-font-weight;
 	line-height: 1.6;
 }
 
 //Headers and paragraphs styling
 .heading-primary{
-	font-size: 3.5rem;
-	font-weight: 700;
+	font-size: $largest-font-size;
+	font-weight: $medium-font-weight;
 	backface-visibility: hidden; /*убирает маленький рывок после анимации */
 }
 
 .heading-secondary{
-	font-size: 2.5rem;
-	font-weight: 700;
+	font-size: $large-font-size;
+	font-weight: $small-font-weight;
 	display: inline-block;
-	letter-spacing: .2rem;
+	letter-spacing: $small-letter-space;
 	transition: all .2s;
 }
 
 .heading-tertiary {
 	font-size: $default-font-size;
-	font-weight: 700;
+	font-weight: $medium-font-weight;
 }
 
-.paragraph {
+//////////////////////////////////BTN SIZES AND STYLE/////////////////////////////
+.btn {
 	font-size: $default-font-size;
+	letter-spacing: $medium-letter-space;
+	color: $color-primary;
+	text-transform: uppercase;
 
-	&:not(:last-child){
-		margin-bottom: 3rem;
+	&:hover{
+		color: $color-white;
+	}
+
+	&--light{
+	    &:hover{
+	      color: $color-secondary;
+	    }
 	}
 }
 
+//////////////////////////////////NAVIGATION SIZES AND STYLE/////////////////////////////
+.navigation{
+	&__list{
+		font-size: $small-font-size;
+		//border: 1px solid red;
+	}
 
+		&__link{
+			color: $color-secondary-dark;
+			text-decoration: none;
 
-//////////////////////////////////
+			&:hover{
+				color: $color-secondary-light;
+			}
+		}
 
-.header__seenon-text{
-	font-size: 1.4rem;
 }
+
+
+//////////////////////////////////HEADER TEXT SIZES AND STYLE/////////////////////////////
+.header{
+	&__heading-1{
+		font-size: $largest-font-size;
+		font-weight: $medium-font-weight;
+		font-style: italic;
+		color: $color-grey-light-2;
+	}
+
+	&__heading-2{
+		color: $color-grey-light-2;
+	}
+
+	&__seenon-text{
+		font-size: $small-font-size;
+		color: $color-grey-light-2;
+	}
+}
+
+//////////////////////////////////CARD TEXT SIZES AND STYLE/////////////////////////////
+%heading{
+	font-size: $smallest-font-size;
+
+	& > span{
+		font-size: $default-font-size;
+		font-weight: $medium-font-weight;
+	}
+}
+
+.card{
+	&__header{	
+		font-size: $default-font-size;
+		font-weight: $small-font-weight;
+	}
+
+	&__content{
+		font-size: $small-font-size;
+	}
+
+	&__link:visited,
+	&__link:link{
+		text-decoration: none;
+		letter-spacing: $small-letter-space;
+	}
+
+	&__time{
+		@extend %heading;		
+	}
+
+	&__views{
+		@extend %heading;
+	}
+
+	&__comments{
+		@extend %heading;
+	}
+}
+
+//////////////////////////////////WORK SECTION TEXT SIZES AND STYLE/////////////////////////////
+.section-work{
+	color: $color-secondary;
+
+	&__heading{
+		font-size: $large-font-size;
+	}
+
+	&__link{
+		color: $color-primary;
+	}
+
+	&__text{
+		font-size: $largest-font-size;
+		font-weight: $small-font-weight;
+	}
+
+	&__btn{
+	}
+}
+
+//////////////////////////////////DESCRIPTION SECTION TEXT SIZES AND STYLE/////////////////////////////
+.section-description{
+
+	&__heading{
+		font-size: $large-font-size;
+
+
+		&-link{
+			text-decoration: none;
+			color: $color-primary
+		}
+	}
+
+	&__content{
+
+		&-heading{
+			font-size: $large-font-size;
+			font-weight: $medium-font-weight;
+		}
+
+		&-text{
+			font-size: $medium-font-size;
+			font-size: $small-font-weight;
+			color: $color-grey-dark-2;
+		}
+	}
+
+	&__link{
+		text-decoration: none;
+	}
+}
+

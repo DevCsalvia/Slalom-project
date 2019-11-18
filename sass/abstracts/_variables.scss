@@ -16,24 +16,45 @@ $color-grey-dark-3: #333;
 $color-white: #fff;
 $color-black: #000;
 
-// FONT
-$smallest-font-size: 1.2rem;
-$small-font-size: 1.4rem;
-$default-font-size: 1.6rem;
-$medium-font-size: 1.8rem;
-$large-font-size: 2.4rem;
-$largest-font-size: 4.8rem;
-
-//Border-radius
-$border-radius-primary: 3px;
 
 // FONT VARIABLES
 $font-primary: 'Lora', sans-serif;
 
+
+// FONT SIZES
+$smallest-font-size: 1.2rem;
+$small-font-size: 1.4rem;
+$default-font-size: 1.6rem;
+$medium-font-size: 2.2rem;
+$large-font-size: 2.8rem;
+$largest-font-size: 5.4rem;
+
+//FONT WEIGHTS
+$smallest-font-weight: 300;
+$small-font-weight: 400;
+$medium-font-weight: 700;
+
+//LETTER SPACING
+$small-letter-space: .2rem;
+$medium-letter-space: .4rem;
+
+//Border-radius
+$border-radius-primary: 3px;
+
 //DEFAULT SHADOW
-$primary-shadow: 4px 7px 7px rgba($color-black, .4);
+$primary-shadow: 4px 10px 10px rgba($color-black, .2);
 $primary-shadow-light: 2px 7px 5px rgba($color-black, .1);
 
 //Grid gap
 $row-gap: 3rem;
 $card-gap: 4.5rem;
+
+//TRANSITION
+$main-transition: .3s .001s cubic-bezier(.54,.14,.42,.98);
+
+//HOVER BTN TOP MOVE
+$top-btn-move: -.3rem;
+
+//Sections padding
+$section-padding: 10rem 0;
+$section-padding-medium: 15rem 0;

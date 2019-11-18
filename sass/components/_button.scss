@@ -4,12 +4,8 @@
   position: relative; 
   padding: 1.6rem 2.5rem;
   padding-right: 2rem;
-  font-size: $default-font-size;
-  letter-spacing: .4rem;
   outline: none;
   border: none;
-  color: $color-grey-dark-3;
-  text-transform: uppercase;
   transition: all .4s cubic-bezier(0.77, 0, 0.175, 1);  
   cursor: pointer;
   user-select: none;
@@ -26,7 +22,6 @@
     transition: inherit;
     z-index: -1;
     border-radius: .8rem;
-    opacity: .95;
   }
 
   &::before{
@@ -48,17 +43,18 @@
   }
   
   &:hover{
-    color: $color-secondary;
     transition-delay: .4s;
     transform: translateY(-.8rem);
     box-shadow: $primary-shadow;
   }
 
   &-arrow{
-    transition: all .3s;
+    transition: margin .3s;
   }
 
   &:hover &-arrow{
+    //transition-delay: .4s;
+    transform: translatex(.4rem);
     margin-left: .7rem;
   }
 
@@ -91,5 +87,38 @@
       background-color: $color-primary-light;
     }
   }
-
 }
+
+
+//////////////////////BTN TEXT
+.btn-text{
+    transition: all .2s;
+    position: relative;
+
+//Bottom border animation effect
+    &::after{
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: currentColor;
+        transition: $main-transition transform;
+        transform-origin: right;
+        transform: scaleX(0);
+      }
+
+//Hover effect for links
+    &:hover{
+      border-radius: $border-radius-primary $border-radius-primary 0 0;
+
+      &::after{
+        transition: transform $main-transition;
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+    }
+
+  
+  }

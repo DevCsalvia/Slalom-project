@@ -27,11 +27,7 @@
 	}
 
 	&__heading-1{
-		font-size: 5.4rem;
-		font-weight: 700;
-		font-style: italic;
 		margin-top: 4rem;
-		color: $color-grey-light-2;
 		//margin-left: 10%;
 
 	//animation appear from bottom
@@ -45,7 +41,6 @@
 		align-self: flex-end;
 		//margin-right: 10%;
 		margin-top: -2rem;
-		color: $color-grey-light-2;
 	//animation appear from right
 	animation: moveInRight .5s ease-out .75s; /*.75 задержка*/
 		animation-fill-mode: backwards; 
@@ -62,8 +57,6 @@
 		grid-template-columns: 1fr max-content 1fr;
 		grid-column-gap: 1.5rem;
 		align-items: center;
-
-		color: $color-grey-light-2;
 
 		//animation appear from bottom
 	animation: moveInRight .5s ease-out .75s; /*.75 задержка*/

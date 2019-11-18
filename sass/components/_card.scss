@@ -6,13 +6,6 @@
 
 	background-color: $color-secondary;
 	color: $color-white;
-
-	font-size: $smallest-font-size;
-
-	& > span{
-		font-size: $default-font-size;
-		font-weight: 600;
-	}
 }
 
 .card{
@@ -50,10 +43,8 @@
 	}
 
 	&__header{	
-		font-size: $default-font-size;
 		background-color: $color-secondary;
 		color: $color-white;
-		font-weight: 400;
 		padding: .7rem 1rem;
 		width: 100%;
 
@@ -65,21 +56,15 @@
 	}
 
 	&__content{
-		font-size: $small-font-size;
-
 		padding: .7rem 1rem;
-
 		grid-column: 1 / -1;
 	}
 
 	&__link:visited,
 	&__link:link{
-		text-decoration: none;
-
 		//btn width change
 		padding: 1.6rem 2rem;
 		padding-right: 1.5rem;
-		letter-spacing: .2rem;
 		
 		justify-self: center;
 
@@ -87,11 +72,13 @@
 	}
 
 	&__time{
-		@extend %heading;		
+		@extend %heading;
+		border-right: 1px solid $color-secondary-dark;		
 	}
 
 	&__views{
 		@extend %heading;
+		border-right: 1px solid $color-secondary-dark;
 	}
 
 	&__comments{

@@ -28,21 +28,20 @@
 	
 	&__list{
 		display: flex;
-		font-size: 1.5rem;
 		margin-right: 1rem;
 		//border: 1px solid red;
 	}
 
 	&__item{
 		list-style: none;
-		transition: all .2s;
+		transition: all $main-transition;
 
 		&:not(:last-child){
 			margin-right: .5rem;
 		}
 
 		&:hover{
-			margin-top: -.2rem;
+			margin-top: $top-btn-move;
 		}
 
 		//animation appear from left
@@ -51,40 +50,15 @@
 	}
 
 	&__link{
-		
-		text-decoration: none;
-		color: $color-secondary-dark;
 		position: relative;
 
 		padding: 1rem;	
-		transition: .2s all;
+		transition: $main-transition all;
 
 //Hover effect for links
 		&:hover{
-			
-			border-radius: $border-radius-primary;
-			//background-color: $color-secondary;
-			color: $color-secondary-light;
 			box-shadow: $primary-shadow-light;
 		}
-
-//Bottom border animation effect
-		&::after{
-			content: "";
-			position: absolute;
-			top: 100%;
-			left: 0;
-			height: 2px;
-			width: 0;
-			background-color: $color-primary;
-			transition: .2s all cubic-bezier(.54,.14,.42,.98);
-		}
-
-		&:hover::after{
-			width: 100%;
-		}
-
-
 	}
 
 //style icon
@@ -98,7 +72,7 @@
 			width: 2.25rem;
 			height: 2.25rem;
 			fill: $color-secondary-dark;	
-			transition: .2s all cubic-bezier(.54,.14,.42,.98);
+			transition: $main-transition;
 
 			&:hover{
 				fill: $color-secondary-light;
@@ -108,8 +82,5 @@
 			animation: moveInBottom .5s ease-out .75s; /*.75 задержка*/
 			animation-fill-mode: backwards; 
 		}
-
-
 	}
-
 }

@@ -27,12 +27,12 @@
 			
 			<nav class="navigation__nav">
 				<ul class="navigation__list">
-					<li class="navigation__item"><a href="#" class="navigation__link">Что мы делаем</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link">Кто мы</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link">Проекты</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link">Вакансии</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link">Отзывы</a></li>
-					<li class="navigation__item"><a href="#" class="navigation__link">Давайте пообщаемся</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link btn-text">Что мы делаем</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link btn-text">Кто мы</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link btn-text">Проекты</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link btn-text">Вакансии</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link btn-text">Отзывы</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link btn-text">Давайте пообщаемся</a></li>
 				</ul>
 				<div class="navigation__search">
 					    <svg class="navigation__search-icon">
@@ -97,7 +97,7 @@
 		</header>
 		
 			<section class="section-work">
-				<h2 class="section-work__heading heading-secondary">Что мы делаем</h2>
+				<h2 class="section-work__heading heading-secondary "><a href="#" class="section-work__link btn-text">Что мы делаем</a></h2>
 
 				<p class="section-work__text">Slalom это современная консалтинговая фирма, сосредоточенная на стратегии, технологиях и трансформации бизнеса </p>
 
@@ -110,85 +110,95 @@
 			<section class="section-projects">
 				<div class="card section-projects__card-1">
 					<img src="img/img-1.jpg" alt="Image-1" class="card__image">
-					<svg class="section-projects__like card__like">
+					<svg class="card__like">
 	                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 	                </svg>
-					<h3 class="section-projects__card-header-1 card__header">Elsevier: более глубокое понимание продаж с Yandex и Huawei</h3>
-					<p class="section-projects__card-content-1 card__content">Наше видение заключается в том, чтобы данные хорошего качества и отличная аналитика были в центре всех процессов принятия решений. &laquo;Многие компании могут получать отрицательные отзывы, но самая большая ценность приходит, когда вы внедряете идеи в повседневную работу человека&raquo; - Tom Perry </p>
-					<a href="#" class="section__card-link btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
-					<div class="section-projects__time card__time"><span>2 мин.</span> читать</div>
-					<div class="section-projects__views card__views"><span>2463</span> просмотра</div>
-					<div class="section-projects__comments card__comments"><span>126</span> комментариев</div>
+					<h3 class="card__header">Elsevier: более глубокое понимание продаж с Yandex и Huawei</h3>
+					<p class="card__content">Наше видение заключается в том, чтобы данные хорошего качества и отличная аналитика были в центре всех процессов принятия решений. &laquo;Многие компании могут получать отрицательные отзывы, но самая большая ценность приходит, когда вы внедряете идеи в повседневную работу человека&raquo; - Tom Perry </p>
+					<a href="#" class="btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
+					<div class="card__time"><span>2 мин.</span> читать</div>
+					<div class="card__views"><span>2463</span> просмотра</div>
+					<div class="card__comments"><span>126</span> комментариев</div>
 				</div>
 
 				<div class="card section-projects__card-2">
 					<img src="img/img-2.jpg" alt="Image-2" class="card__image">
-					<svg class="section-projects__like card__like">
+					<svg class="card__like">
 	                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 	                </svg>
-					<h3 class="section-projects__card-header-2 card__header">Спасение жизни с помощью социальных приложений</h3>
-					<p class="section-projects__card-content-2 card__content">&laquo;Slalom рекомендовал Salesforce в качестве операционной основы для решения, которое ускорило проект и с тех пор сделало адаптацию новых сотрудников легкой, потому что навигация стала интуитивно понятна. Также Slalom выступает в качестве партнера, основателя и стратегического расширения команд. Помогая продумать приоритеты, необходимые для успеха&raquo; - John Smith</p>
-					<a href="#" class="section__card-link btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
-					<div class="section-projects__time card__time"><span>4 мин.</span> читать</div>
-					<div class="section-projects__views card__views"><span>4876</span> просмотров</div>
-					<div class="section-projects__comments card__comments"><span>327</span> комментариев</div>
+					<h3 class="card__header">Спасение жизни с помощью социальных приложений</h3>
+					<p class="card__content">&laquo;Slalom рекомендовал Salesforce в качестве операционной основы для решения, которое ускорило проект и с тех пор сделало адаптацию новых сотрудников легкой, потому что навигация стала интуитивно понятна. Также Slalom выступает в качестве партнера, основателя и стратегического расширения команд. Помогая продумать приоритеты, необходимые для успеха&raquo; - John Smith</p>
+					<a href="#" class="btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
+					<div class="card__time"><span>4 мин.</span> читать</div>
+					<div class="card__views"><span>4876</span> просмотров</div>
+					<div class="card__comments"><span>327</span> комментариев</div>
 				</div>
 
 				<div class="card section-projects__card-3">
 					<img src="img/img-3.jpg" alt="Image-3" class="card__image">
-					<svg class="section-projects__like card__like">
+					<svg class="card__like">
 	                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 	                </svg>
-					<h3 class="section-projects__card-header-3 card__header">Поиск моделей рака молочной железы с помощью машинного обучения</h3>
-					<p class="section-projects__card-content-3 card__content">Walgreens и Prime Therapeutics запустили совместное предприятие AllianceRx Walgreens Prime с многомиллиардным оборотом, чтобы предоставлять своим клиентам удобный и ориентированный на пациента уход. Slalom помог AllianceRx Walgreens Prime подготовиться к запуску бренда и наладил прочное творческое партнерство на этом пути.</p>
-					<a href="#" class="section__card-link btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
-					<div class="section-projects__time card__time"><span>3 мин.</span> читать</div>
-					<div class="section-projects__views card__views"><span>1295</span> просмотров</div>
-					<div class="section-projects__comments card__comments"><span>36</span>комментариев</div>
+					<h3 class="card__header">Поиск моделей рака молочной железы с помощью машинного обучения</h3>
+					<p class="card__content">Walgreens и Prime Therapeutics запустили совместное предприятие AllianceRx Walgreens Prime с многомиллиардным оборотом, чтобы предоставлять своим клиентам удобный и ориентированный на пациента уход. Slalom помог AllianceRx Walgreens Prime подготовиться к запуску бренда и наладил прочное творческое партнерство на этом пути.</p>
+					<a href="#" class="btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
+					<div class="card__time"><span>3 мин.</span> читать</div>
+					<div class="card__views"><span>1295</span> просмотров</div>
+					<div class="card__comments"><span>36</span>комментариев</div>
 				</div>
 
 				<div class="card section-projects__card-4">
 					<img src="img/img-4.jpg" alt="Image-4" class="card__image">
-					<svg class="section-projects__like card__like">
+					<svg class="card__like">
 	                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 	                </svg>
-					<h3 class="section-projects__card-header-4 card__header">Внедрение нового бренда в современную жизнь</h3>
-					<p class="section-projects__card-content-4 card__content">Способность Slalom показывать сильный креатив в сочетании с глубоким пониманием бизнеса оказала ощутимое влияние на новый бренд. &quot;Наша роль как творческой команды не ограничивалась дизайном&quot;, - говорит Маккей</p>
-					<a href="#" class="section__card-link-4 btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
-					<div class="section-projects__time card__time"><span>6 мин.</span> читать</div>
-					<div class="section-projects__views card__views"><span>3259</span> просмотров</div>
-					<div class="section-projects__comments card__comments"><span>76 </span>комментариев</div>
+					<h3 class="card__header">Внедрение нового бренда в современную жизнь</h3>
+					<p class="card__content">Способность Slalom показывать сильный креатив в сочетании с глубоким пониманием бизнеса оказала ощутимое влияние на новый бренд. &quot;Наша роль как творческой команды не ограничивалась дизайном&quot;, - говорит Маккей</p>
+					<a href="#" class="btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
+					<div class="card__time"><span>6 мин.</span> читать</div>
+					<div class="card__views"><span>3259</span> просмотров</div>
+					<div class="card__comments"><span>76 </span>комментариев</div>
 				</div>
 
 				<div class="card section-projects__card-5">
 					<img src="img/img-5.jpg" alt="Image-5" class="card__image">
-					<svg class="section-projects__like card__like">
+					<svg class="card__like">
 	                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 	                </svg>
-					<h3 class="section-projects__card-header-5 card__header">LiveRamp: На 5 лет впереди кривой маркетинга</h3>
-					<p class="section-projects__card-content-5 card__content">То, что Slalom сделал для LiveRamp, является чрезвычайно передовым из того, что можно сделать с точки зрения аналитики. И я не думаю, что кто-то другой мог бы сделать это для нас - Rebecca Stone </p>
-					<a href="#" class="section__card-link-5 btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
-					<div class="section-projects__time card__time"><span>5 мин.</span> читать</div>
-					<div class="section-projects__views card__views"><span>7846</span> просмотров</div>
-					<div class="section-projects__comments card__comments"><span>257</span> комментариев</div>
+					<h3 class="card__header">LiveRamp: На 5 лет впереди кривой маркетинга</h3>
+					<p class="card__content">То, что Slalom сделал для LiveRamp, является чрезвычайно передовым из того, что можно сделать с точки зрения аналитики. И я не думаю, что кто-то другой мог бы сделать это для нас - Rebecca Stone </p>
+					<a href="#" class="btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
+					<div class="card__time"><span>5 мин.</span> читать</div>
+					<div class="card__views"><span>7846</span> просмотров</div>
+					<div class="card__comments"><span>257</span> комментариев</div>
 				</div>
 
 				<div class="card section-projects__card-6">
 					<img src="img/img-6.jpg" alt="Image-6" class="card__image">
-					<svg class="section-projects__like card__like">
+					<svg class="card__like">
 	                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 	                </svg>
-					<h3 class="section-projects__card-header-6 card__header">Обеспечение &laquo;золотого стандарта&raquo; слияния авиакомпаний</h3>
-					<p class="section-projects__card-content-6 card__content">Наша задача состояла в том, чтобы собрать всех людей, планы и технологии на месте, чтобы—в один день—начать предлагать один график, один опыт аэропорта, один опыт колл-центра и один цифровой опыт для интернета, мобильных устройств и киоска таким образом, чтобы это было удобно для наших гостей. </p>
-					<a href="#" class="section__card-link-6 btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
-					<div class="section-projects__time card__time"><span>8 мин.</span> читать</div>
-					<div class="section-projects__views card__views"><span>9547</span> просмотров</div>
-					<div class="section-projects__comments card__comments"><span>562</span> комментария</div>
+					<h3 class="card__header">Обеспечение &laquo;золотого стандарта&raquo; слияния авиакомпаний</h3>
+					<p class="card__content">Наша задача состояла в том, чтобы собрать всех людей, планы и технологии на месте, чтобы—в один день—начать предлагать один график, один опыт аэропорта, один опыт колл-центра и один цифровой опыт для интернета, мобильных устройств и киоска таким образом, чтобы это было удобно для наших гостей. </p>
+					<a href="#" class="btn btn--light card__link">Читать далее <span class="btn-arrow"> &rarr;</span></a>
+					<div class="card__time"><span>8 мин.</span> читать</div>
+					<div class="card__views"><span>9547</span> просмотров</div>
+					<div class="card__comments"><span>562</span> комментария</div>
 				</div>
 			</section>
 
-			<section class="section-vacancies">
-				Section vacancies
+			<section class="section-description">
+				<h3 class="section-description__heading heading-tertiary"><a href="#" class="section-description__heading-link btn-text">Кто мы</a></h3>
+				<div class="section-description__content">
+					<h2 class="heading-secondary section-description__content-heading">Мы, прежде всего, ориентированные на людей консультанты, стратеги и инженеры.</h2>
+						<p class="section-description__content-text">
+							Команды Slalom стремятся делать то, что правильно, и помогают вам реализовать свое видение. Мы верим в совместное достижение успеха, улучшение вашей организации после каждого взаимодействия и укрепление доверия к следующей большой задаче.
+						</p>
+				</div>
+				<a href="#" class="btn section-description__link">Познакомиться с нами</a>
+				<img src="img/img-7.jpg" alt="Description img-1" class="section-description__img-1">
+				<img src="img/img-8.jpg" alt="Description img-2" class="section-description__img-2">
+				<img src="img/img-9.jpg" alt="Description img-3" class="section-description__img-3">
 			</section>
 
 			<section class="section-reviews">

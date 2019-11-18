@@ -1,23 +1,30 @@
 .section-work{
 	background-color: $color-grey-light-1;
-	color: $color-secondary;
 	padding: 7rem 0;
 
 	&__heading{
-		font-size: $large-font-size;
-		color: $color-primary;
 		grid-column: center-start / center-end;
+		align-self: center;
+
+		transition: all $main-transition;
+
+		border-radius: $border-radius-primary $border-radius-primary 0 0;
+		&:hover{
+			//box-shadow: $primary-shadow;
+			//margin-top: $top-btn-move;
+		}
+	}
+
+	&__link{
+		padding: .2rem .4rem;
+		text-decoration: none;
 	}
 
 	&__text{
-		font-size: $largest-font-size;
-		font-weight: 400;
 		grid-column: center-start / center-end;
 	}
 
 	&__btn{
 		grid-column: center-start / center-end;
 	}
-
-
 }
