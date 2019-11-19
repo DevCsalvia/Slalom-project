@@ -55,13 +55,15 @@ body {
 .heading-secondary {
   font-size: 2.8rem;
   font-weight: 400;
-  display: inline-block;
-  letter-spacing: 0.2rem;
-  transition: all .2s; }
+  letter-spacing: 0.2rem; }
 
 .heading-tertiary {
+  font-size: 2.2rem;
+  font-weight: 400; }
+
+.heading-fourth {
   font-size: 1.6rem;
-  font-weight: 700; }
+  font-weight: 300; }
 
 .btn {
   font-size: 1.6rem;
@@ -135,10 +137,72 @@ body {
 .section-description__content-text {
   font-size: 2.2rem;
   font-size: 400;
-  color: #999; }
+  color: #333; }
 
 .section-description__link {
   text-decoration: none; }
+
+.section-reviews__heading-link, .section-reviews__news-link, .section-reviews__article-link, .section-reviews__partnership-link {
+  text-decoration: none; }
+
+.section-reviews__heading-header {
+  font-size: 2.8rem; }
+
+.section-reviews__heading-link {
+  color: #c69963; }
+
+.section-reviews__heading-text {
+  font-size: 2.8rem;
+  font-weight: 700; }
+
+.section-reviews__news {
+  font-size: 1.6rem; }
+  .section-reviews__news-link {
+    color: #000; }
+  .section-reviews__news-name {
+    font-size: 1.4rem;
+    color: #777; }
+
+.section-reviews__links > * {
+  display: inline-block;
+  text-decoration: none; }
+
+.section-reviews__article-link {
+  font-size: 1.4rem;
+  color: #777; }
+
+.section-reviews__partnership {
+  color: #fff; }
+  .section-reviews__partnership-heading {
+    font-size: 1.4rem; }
+  .section-reviews__partnership-text {
+    font-size: 1.8rem;
+    font-weight: 300; }
+  .section-reviews__partnership-link {
+    color: currentColor;
+    font-size: 1.6rem;
+    text-transform: none; }
+
+.u-margin-bottom-small {
+  margin-bottom: .8rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 3.5rem !important;
+  /*@include respond(tab-port) {
+		margin-bottom: 3rem !important;
+	}*/ }
+
+.u-margin-bottom-big {
+  margin-bottom: 6rem !important;
+  /*@include respond(tab-port) {
+		margin-bottom: 5rem !important;
+	}*/ }
+
+.u-margin-top-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-bottom: 8rem !important; }
 
 /* ~~~~~~~ INIT. BTN ~~~~~~~ */
 .btn {
@@ -216,7 +280,7 @@ body {
     transform-origin: right;
     transform: scaleX(0); }
   .btn-text:hover {
-    border-radius: 3px 3px 0 0; }
+    border-radius: 0.3rem 0.3rem 0 0; }
     .btn-text:hover::after {
       transition: transform 0.3s 0.001s cubic-bezier(0.54, 0.14, 0.42, 0.98);
       transform-origin: left;
@@ -275,20 +339,30 @@ body {
   .card__views {
     border-right: 1px solid #0e1131; }
 
+.under-line {
+  position: relative; }
+  .under-line:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: currentColor; }
+
 .section-description {
   background-color: #f7f7f7;
-  position: relative; }
+  position: relative;
+  /*%image{
+		width: 100%;
+		display: inline-block;
+	}*/ }
   .section-description__heading {
-    grid-column: col-start 3 / col-end 8;
-    margin-bottom: 1rem; }
+    grid-column: col-start 3 / col-end 8; }
   .section-description__content {
-    grid-column: col-start 3 / col-end 8;
-    margin-bottom: 3rem; }
-    .section-description__content-heading {
-      margin-bottom: 3rem; }
+    grid-column: col-start 3 / col-end 8; }
   .section-description__link {
-    grid-column: col-start 3 / col-end 8;
-    margin-bottom: 3rem; }
+    grid-column: col-start 3 / col-end 8; }
   .section-description__img-1 {
     display: inline-block;
     grid-column: 1 / 4;
@@ -320,9 +394,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  display: grid;
-  justify-items: center;
-  align-items: center;
   /*display: flex;
 	align-items: center;
 	justify-content: center;
@@ -426,6 +497,78 @@ body {
       .navigation__search-icon:hover {
         fill: #242d81; }
 
+.section-reviews {
+  background-color: #eee; }
+  .section-reviews__heading {
+    grid-column: col-start 5 / col-end 10; }
+  .section-reviews .section-reviews__news-item, .section-reviews .section-reviews__links-1, .section-reviews .section-reviews__links-2, .section-reviews .section-reviews__partnership-link {
+    transition: all 0.2s cubic-bezier(0.54, 0.14, 0.42, 0.98); }
+    .section-reviews .section-reviews__news-item:hover, .section-reviews .section-reviews__links-1:hover, .section-reviews .section-reviews__links-2:hover, .section-reviews .section-reviews__partnership-link:hover {
+      opacity: .6; }
+  .section-reviews__news {
+    grid-column: col-start 1 / col-end 3; }
+    .section-reviews__news-list {
+      list-style: none;
+      display: grid;
+      grid-row-gap: 6rem; }
+    .section-reviews__news-link {
+      display: flex;
+      flex-direction: column; }
+  .section-reviews__links-1 {
+    margin-right: 4rem;
+    color: #c69963; }
+  .section-reviews__links-2 {
+    color: #c69963; }
+  .section-reviews__articles {
+    grid-column: col-start 5 / col-end 10;
+    display: grid;
+    grid-row-gap: 12rem; }
+  .section-reviews__article {
+    overflow: hidden; }
+    .section-reviews__article-link {
+      display: grid;
+      grid-template-rows: min-content minmax(20rem, 34rem); }
+      .section-reviews__article-link:hover .section-reviews__article-heading {
+        background-color: #191F59;
+        color: #fff; }
+    .section-reviews__article-img {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0.3rem; }
+    .section-reviews__article-heading {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2;
+      background-color: #fff;
+      align-self: end;
+      justify-self: end;
+      width: 90%;
+      padding: 2rem 3rem;
+      border-radius: 0.3rem;
+      transform: translateY(70%);
+      transition: all 0.2s cubic-bezier(0.54, 0.14, 0.42, 0.98); }
+  .section-reviews__partnership {
+    background-color: #191F59;
+    justify-self: end;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-row-gap: 1.5rem;
+    padding: 3rem 4rem;
+    width: 90%; }
+    .section-reviews__partnership-heading {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2; }
+    .section-reviews__partnership-text {
+      grid-row: 2 / 3;
+      grid-column: 1 / 2; }
+    .section-reviews__partnership-link {
+      grid-row: 2 / 3;
+      grid-column: 2 / 3;
+      justify-self: center;
+      align-self: start; }
+
 .section-work {
   background-color: #f7f7f7;
   padding: 7rem 0; }
@@ -433,7 +576,7 @@ body {
     grid-column: center-start / center-end;
     align-self: center;
     transition: all 0.3s 0.001s cubic-bezier(0.54, 0.14, 0.42, 0.98);
-    border-radius: 3px 3px 0 0; }
+    border-radius: 0.3rem 0.3rem 0 0; }
   .section-work__link {
     padding: .2rem .4rem;
     text-decoration: none; }
@@ -441,6 +584,9 @@ body {
     grid-column: center-start / center-end; }
   .section-work__btn {
     grid-column: center-start / center-end; }
+
+.container .header, .container .section-description, .container .section-reviews {
+  grid-template-columns: minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 11.4rem) [col-end]) [center-end] minmax(6rem, 1fr); }
 
 .container {
   display: grid;
@@ -450,7 +596,9 @@ body {
   .container .header {
     grid-row: header-start / header-end;
     grid-column: full-start / full-end;
-    grid-template-columns: minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 11.4rem) [col-end]) [center-end] minmax(6rem, 1fr);
+    display: grid;
+    justify-items: center;
+    align-items: center;
     grid-template-rows: [text-start] minmax(max-content, 80%) [text-end logo-start] minmax(min-content, 20%) [logo-end]; }
   .container .section-work {
     grid-row: row-start 1 / row-end 1;
@@ -459,7 +607,7 @@ body {
     grid-template-columns: minmax(6rem, 1fr) [center-start] minmax(min-content, 114rem) [center-end] minmax(6rem, 1fr);
     grid-template-rows: minmax(min-content, 4.5rem);
     justify-items: start;
-    grid-row-gap: 3rem; }
+    grid-row-gap: 4rem; }
   .container .section-projects {
     grid-row: row-start 2 / row-end 2;
     grid-column: center-start / center-end;
@@ -471,7 +619,13 @@ body {
     grid-row: row-start 3 / row-end 3;
     grid-column: full-start / full-end;
     display: grid;
-    grid-template-columns: minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 11.4rem) [col-end]) [center-end] minmax(6rem, 1fr);
     align-items: start;
     justify-items: start;
     padding: 15rem 0; }
+  .container .section-reviews {
+    grid-row: row-start 4 / row-end 4;
+    grid-column: full-start / full-end;
+    display: grid;
+    grid-column-gap: 4rem;
+    grid-row-gap: 8rem;
+    padding: 10rem 0; }

@@ -25,6 +25,7 @@ $font-primary: 'Lora', sans-serif;
 $smallest-font-size: 1.2rem;
 $small-font-size: 1.4rem;
 $default-font-size: 1.6rem;
+$default-font-size-2: 1.8rem;
 $medium-font-size: 2.2rem;
 $large-font-size: 2.8rem;
 $largest-font-size: 5.4rem;
@@ -39,18 +40,23 @@ $small-letter-space: .2rem;
 $medium-letter-space: .4rem;
 
 //Border-radius
-$border-radius-primary: 3px;
+$border-radius-primary: .3rem;
 
 //DEFAULT SHADOW
 $primary-shadow: 4px 10px 10px rgba($color-black, .2);
 $primary-shadow-light: 2px 7px 5px rgba($color-black, .1);
 
 //Grid gap
-$row-gap: 3rem;
+$small-row-gap: 1.5rem;
+$row-gap: 4rem;
+$medium-row-gap: 6rem;
+$big-row-gap: 8rem;
+$large-row-gap: 12rem;
 $card-gap: 4.5rem;
 
 //TRANSITION
 $main-transition: .3s .001s cubic-bezier(.54,.14,.42,.98);
+$faster-main-transition: .2s cubic-bezier(.54,.14,.42,.98);
 
 //HOVER BTN TOP MOVE
 $top-btn-move: -.3rem;
@@ -58,3 +64,7 @@ $top-btn-move: -.3rem;
 //Sections padding
 $section-padding: 10rem 0;
 $section-padding-medium: 15rem 0;
+
+//Article heading padding
+$article-heading-padding: 2rem 3rem;
+$partnership-heading-padding: 3rem 4rem;

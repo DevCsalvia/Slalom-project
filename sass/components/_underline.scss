@@ -1,0 +1,14 @@
+//Not for use with any element where we used after pseudo-element and position!!!
+.under-line{
+	position: relative;
+
+	&:after{
+		content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: currentColor;
+	}
+}

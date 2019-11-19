@@ -15,14 +15,17 @@ body{
 .heading-secondary{
 	font-size: $large-font-size;
 	font-weight: $small-font-weight;
-	display: inline-block;
 	letter-spacing: $small-letter-space;
-	transition: all .2s;
 }
 
 .heading-tertiary {
+	font-size: $medium-font-size;
+	font-weight: $small-font-weight;
+}
+
+.heading-fourth {
 	font-size: $default-font-size;
-	font-weight: $medium-font-weight;
+	font-weight: $smallest-font-weight;
 }
 
 //////////////////////////////////BTN SIZES AND STYLE/////////////////////////////
@@ -164,7 +167,7 @@ body{
 		&-text{
 			font-size: $medium-font-size;
 			font-size: $small-font-weight;
-			color: $color-grey-dark-2;
+			color: $color-grey-dark-3;
 		}
 	}
 
@@ -173,3 +176,83 @@ body{
 	}
 }
 
+
+//////////////////////////////////DESCRIPTION SECTION TEXT SIZES AND STYLE/////////////////////////////
+%links{
+	text-decoration: none;
+}
+
+.section-reviews{
+
+//heading part
+	&__heading{
+
+		&-header{
+			font-size: $large-font-size;
+
+		}
+
+		&-link{
+			@extend %links;
+			color: $color-primary;
+		}
+
+		&-text{
+			font-size: $large-font-size;
+			font-weight: $medium-font-weight;
+		}
+	}
+//news part	
+	&__news{
+		font-size: $default-font-size;
+
+		&-link{
+			@extend %links;
+			color: $color-black;
+		}
+
+		&-name{
+			font-size: $small-font-size;
+			color: $color-grey-dark;
+		}
+	}
+
+	&__links{
+
+		& > *{
+			display: inline-block;
+			text-decoration: none;
+		}
+	}
+
+//Articles part
+
+	&__article{
+
+		&-link{
+			@extend %links;
+			font-size: $small-font-size;
+			color: $color-grey-dark;
+		}
+	}
+
+	&__partnership{
+		color: $color-white;
+
+		&-heading{
+			font-size: $small-font-size;
+		}
+
+		&-text{
+			font-size: $default-font-size-2;
+			font-weight: $smallest-font-weight;
+		}
+
+		&-link{
+			@extend %links;
+			color: currentColor;
+			font-size: $default-font-size;
+			text-transform: none;
+		}
+	}
+}

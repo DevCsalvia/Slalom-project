@@ -1,3 +1,10 @@
+%main-grid-columns{
+	grid-template-columns: minmax(6rem, 1fr) [center-start]
+						   repeat(10, [col-start] minmax(min-content, 11.4rem)
+						   [col-end]) [center-end] minmax(6rem, 1fr);
+}
+
+
 .container{
 	display: grid;
 	grid-template-rows: 8rem [header-start] calc(100vh - 8rem) [header-end] repeat(6, [row-start] min-content [row-end]);
@@ -9,9 +16,10 @@
 		grid-row: header-start / header-end;
 		grid-column: full-start / full-end;
 
-		grid-template-columns: minmax(6rem, 1fr) [center-start]
-						   repeat(10, [col-start] minmax(min-content, 11.4rem)
-						   [col-end]) [center-end] minmax(6rem, 1fr);
+		display: grid;
+		@extend %main-grid-columns;
+		justify-items: center;
+		align-items: center;
 		grid-template-rows: [text-start] minmax(max-content, 80%) [text-end logo-start] minmax(min-content, 20%) [logo-end];
 	}
 
@@ -43,12 +51,21 @@
 		grid-column: full-start / full-end;
 
 		display: grid;
-		grid-template-columns: minmax(6rem, 1fr) [center-start]
-						   repeat(10, [col-start] minmax(min-content, 11.4rem)
-						   [col-end]) [center-end] minmax(6rem, 1fr);
+		@extend %main-grid-columns;
 		align-items: start;
 		justify-items: start;
 
 		padding: $section-padding-medium;
+	}
+
+	.section-reviews{
+		grid-row: row-start 4 / row-end 4;
+		grid-column: full-start / full-end;
+
+		display: grid;
+		@extend %main-grid-columns;
+		grid-column-gap: $row-gap;
+		grid-row-gap: $big-row-gap;
+		padding: $section-padding;
 	}
 }
