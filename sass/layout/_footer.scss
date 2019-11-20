@@ -1,0 +1,112 @@
+.footer{
+	%footer-link-style{
+		color: $color-white;
+		text-decoration: none;
+
+		transition: all $faster-main-transition;
+
+		&:hover{
+			opacity: .6;
+		}
+	}
+
+	&__feedback{
+		grid-column: col-start 1 / col-end 3;
+
+		display: grid;
+		grid-row-gap: $small-row-gap;
+	}
+
+	&__img{
+		width: 38%;
+	}
+
+	&__notes{
+
+		&-paragraph{
+
+		}
+
+		&-link{
+			@extend %footer-link-style;
+
+			//because i want to give bigger priority than extend!
+			text-decoration: underline !important;
+		}
+	}
+
+	&__icons{
+		grid-row: 2 / 3;
+		grid-column: 2 / 4;
+		
+//DOESN'T work here!!!!
+/*		&:not(:last-child){
+			margin-right: $right-margin;
+		}*/
+	}
+
+	&__icon{
+		width: 2.8rem;
+		height: 2.8rem;
+
+		fill: $color-white;
+		margin-right: $right-margin;
+	}
+
+	&__revision{
+		grid-column: col-start 5 / col-end 10;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+		grid-column-gap: $small-column-gap;
+	}
+
+	&__column{
+
+		display: grid;
+		grid-template-rows: 38%;
+		grid-row-gap: $small-row-gap;
+
+		&-name{
+			@extend %footer-link-style;
+			font-size: $medium-font-size;
+			align-self: center;
+
+			&::after{
+				top: 150%;
+			}
+		}
+
+		&-list{
+			list-style: none;
+		}
+
+		&-item{
+			
+		}
+
+		&-link{
+			@extend %footer-link-style;
+
+		}
+	}
+
+	&__copyright{
+		grid-column: col-start 5 / col-end 10;
+		position: relative;
+		
+		&::before{
+			content: "";
+			position: absolute;
+			height: 1px;
+			background-color: $color-white;
+			top: -1.6rem;
+			left: 0;
+			width: 100%;
+		}
+
+		&-text{
+
+		}
+	}
+}

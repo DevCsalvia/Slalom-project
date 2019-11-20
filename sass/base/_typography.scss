@@ -68,8 +68,6 @@ body{
 //////////////////////////////////HEADER TEXT SIZES AND STYLE/////////////////////////////
 .header{
 	&__heading-1{
-		font-size: $largest-font-size;
-		font-weight: $medium-font-weight;
 		font-style: italic;
 		color: $color-grey-light-2;
 	}
@@ -253,6 +251,37 @@ body{
 			color: currentColor;
 			font-size: $default-font-size;
 			text-transform: none;
+		}
+	}
+}
+
+
+//////////////////////////////////CAREERS SECTION TEXT SIZES AND STYLE/////////////////////////////
+.section-careers{
+
+	&__heading{
+		& > h2{
+			font-size: $largest-font-size;
+			font-weight: $small-font-weight;
+		}
+		
+	}
+
+	&__link{
+		@extend %links;
+	}
+}
+
+
+//////////////////////////////////CAREERS SECTION TEXT SIZES AND STYLE/////////////////////////////
+.footer{
+	color: $color-white;
+	font-size: $default-font-size;
+
+	&__notes{
+		
+		&-paragraph{
+			font-size: $default-font-size-2;
 		}
 	}
 }

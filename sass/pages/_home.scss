@@ -10,7 +10,7 @@
 	grid-template-rows: 8rem [header-start] calc(100vh - 8rem) [header-end] repeat(6, [row-start] min-content [row-end]);
 	grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start]
 						   minmax(min-content, 114rem) [center-end] minmax(6rem, 1fr) [full-end]; 
-	margin-bottom: 100vh;
+	//margin-bottom: 100vh;
 
 	.header{
 		grid-row: header-start / header-end;
@@ -64,8 +64,32 @@
 
 		display: grid;
 		@extend %main-grid-columns;
-		grid-column-gap: $row-gap;
+		grid-column-gap: $column-gap;
 		grid-row-gap: $big-row-gap;
 		padding: $section-padding;
+		padding-bottom: 0;
+	}
+
+	.section-careers{
+		grid-row: row-start 5 / row-end 5;
+		grid-column: center-start / center-end;
+
+		padding: $section-padding;
+		padding-top: 25rem;
+	}
+
+	.footer{
+		grid-row: row-start 6 / row-end 6;
+		grid-column: full-start / full-end;
+
+		display: grid;
+		@extend %main-grid-columns;
+
+		grid-column-gap: $small-column-gap;
+		grid-row-gap: $large-row-gap;
+
+		padding: $section-padding-small;
+
+		background-color: $color-grey-dark-4;
 	}
 }

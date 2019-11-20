@@ -12,6 +12,7 @@ $color-grey-light-2: #eee;
 $color-grey-dark: #777;
 $color-grey-dark-2: #999;
 $color-grey-dark-3: #333;
+$color-grey-dark-4: #222;
 
 $color-white: #fff;
 $color-black: #000;
@@ -52,7 +53,16 @@ $row-gap: 4rem;
 $medium-row-gap: 6rem;
 $big-row-gap: 8rem;
 $large-row-gap: 12rem;
+
+
+$small-column-gap: 1.5rem;
+$column-gap: 4rem;
+$medium-column-gap: 6rem;
+$big-column-gap: 8rem;
+$large-column-gap: 12rem;
+
 $card-gap: 4.5rem;
+
 
 //TRANSITION
 $main-transition: .3s .001s cubic-bezier(.54,.14,.42,.98);
@@ -62,9 +72,13 @@ $faster-main-transition: .2s cubic-bezier(.54,.14,.42,.98);
 $top-btn-move: -.3rem;
 
 //Sections padding
+$section-padding-small: 5rem 0;
 $section-padding: 10rem 0;
 $section-padding-medium: 15rem 0;
 
 //Article heading padding
 $article-heading-padding: 2rem 3rem;
 $partnership-heading-padding: 3rem 4rem;
+
+// MARGINS
+$right-margin: 2.5rem;
