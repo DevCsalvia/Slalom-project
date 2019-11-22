@@ -30,6 +30,8 @@ $default-font-size-2: 1.8rem;
 $medium-font-size: 2.2rem;
 $large-font-size: 2.8rem;
 $largest-font-size: 5.4rem;
+$largest-font-size-1: 4.8rem;
+$largest-font-size-2: 4.4rem;
 
 //FONT WEIGHTS
 $smallest-font-weight: 300;
@@ -55,6 +57,7 @@ $big-row-gap: 8rem;
 $large-row-gap: 12rem;
 
 
+$smallest-column-gap: .5rem;
 $small-column-gap: 1.5rem;
 $column-gap: 4rem;
 $medium-column-gap: 6rem;
@@ -81,4 +84,22 @@ $article-heading-padding: 2rem 3rem;
 $partnership-heading-padding: 3rem 4rem;
 
 // MARGINS
+$smallest-right-margin: .3rem;
+$small-right-margin: 1.5rem;
 $right-margin: 2.5rem;
+
+
+// RESPONCIVE Grid column names
+$medium-grid-column: col-start 3 / col-end 8;
+$big-grid-column: col-start 2 / col-end 9;
+
+
+// RESPONSIVE BREAKPOINTS
+$bp-1: 87.5em; // 1400px
+$bp-2: 81.25em; // 1300px
+$bp-3: 68.75em; // 1100px
+$bp-4: 62.5em; // 1000px
+$bp-5: 56.25em; // 900px
+$bp-6: 53.125em; // 850px
+$bp-7: 43.75em; // 700px
+ //$bp-6: 37.5em; 600px

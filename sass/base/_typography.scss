@@ -70,6 +70,14 @@ body{
 	&__heading-1{
 		font-style: italic;
 		color: $color-grey-light-2;
+
+		@media only screen and (max-width: $bp-4) {
+			font-size: $largest-font-size-1;
+		}
+
+		@media only screen and (max-width: $bp-6) {
+			font-size: $largest-font-size-2;
+		}
 	}
 
 	&__heading-2{
@@ -81,6 +89,37 @@ body{
 		color: $color-grey-light-2;
 	}
 }
+
+
+//////////////////////////////////WORK SECTION TEXT SIZES AND STYLE/////////////////////////////
+.section-work{
+	color: $color-secondary;
+
+	&__heading{
+		font-size: $large-font-size;		
+	}
+
+	&__link{
+		color: $color-primary;
+	}
+
+	&__text{
+		font-size: $largest-font-size;
+		font-weight: $small-font-weight;
+
+		@media only screen and (max-width: $bp-4) {
+			font-size: $largest-font-size-1;
+		}
+
+		@media only screen and (max-width: $bp-6) {
+			font-size: $largest-font-size-2;
+		}
+	}
+
+	&__btn{
+	}
+}
+
 
 //////////////////////////////////CARD TEXT SIZES AND STYLE/////////////////////////////
 %heading{
@@ -118,27 +157,6 @@ body{
 
 	&__comments{
 		@extend %heading;
-	}
-}
-
-//////////////////////////////////WORK SECTION TEXT SIZES AND STYLE/////////////////////////////
-.section-work{
-	color: $color-secondary;
-
-	&__heading{
-		font-size: $large-font-size;
-	}
-
-	&__link{
-		color: $color-primary;
-	}
-
-	&__text{
-		font-size: $largest-font-size;
-		font-weight: $small-font-weight;
-	}
-
-	&__btn{
 	}
 }
 
@@ -197,7 +215,7 @@ body{
 
 		&-text{
 			font-size: $large-font-size;
-			font-weight: $medium-font-weight;
+			font-weight: $small-font-weight;
 		}
 	}
 //news part	
@@ -263,6 +281,10 @@ body{
 		& > h2{
 			font-size: $largest-font-size;
 			font-weight: $small-font-weight;
+
+			@media only screen and (max-width: $bp-6) {
+				font-size: $largest-font-size-1;
+			}
 		}
 		
 	}

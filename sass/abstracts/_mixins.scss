@@ -1,3 +1,41 @@
 @mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
   transition: $property $duration $ease;
 }
+
+/////////////////HEADER SECTION MEDIA MIXIN////////////////////////////////////////
+@mixin header-responsive-breakpoint{
+	@media only screen and (max-width: $bp-6) {
+			grid-column: $medium-grid-column;
+		}
+}
+
+
+/////////////////WORK SECTION MEDIA MIXIN////////////////////////////////////////
+@mixin responsive-breakpoint-style(){
+	@media only screen and (max-width: $bp-6) {
+			grid-column: $medium-grid-column;
+		}
+}
+
+
+/////////////////DESCRIPTION SECTION MEDIA MIXIN////////////////////////////////////////
+@mixin responsive-media() {
+  @media only screen and (max-width: $bp-4) {
+			//grid-column: col-start 10 / -1;
+			grid-column: $medium-grid-column;	
+		}
+}
+
+/////////////////REVIEW SECTION MEDIA MIXIN////////////////////////////////////////
+@mixin review-responsive-breakpoint{
+	@media only screen and (max-width: $bp-6) {
+			grid-column: $medium-grid-column;
+		}
+}
+
+/////////////////CAREERS SECTION MEDIA MIXIN////////////////////////////////////////
+@mixin careers-responsive-breakpoint{
+	@media only screen and (max-width: $bp-6) {
+			grid-column: $medium-grid-column;
+		}
+}

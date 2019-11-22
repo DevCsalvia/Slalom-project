@@ -3,7 +3,9 @@
 
 //heading part
 	&__heading{
-		grid-column: col-start 5 / col-end 10;	
+		grid-column: col-start 5 / col-end 10;
+
+		@include review-responsive-breakpoint;
 	
 		&-header{
 
@@ -26,8 +28,11 @@
 				opacity: .6;
 			}
 }
+
 	&__news{
 		grid-column: col-start 1 / col-end 3;
+
+		@include review-responsive-breakpoint;
 
 		&-list{
 		list-style: none;
@@ -47,6 +52,10 @@
 
 		&-name{
 			//margin-bottom: 1.8rem;
+		}
+
+		@media only screen and (max-width: $bp-6) {
+			margin-top: 6rem;
 		}
 	}
 
@@ -72,6 +81,12 @@
 
 		display: grid;
 		grid-row-gap: $large-row-gap;
+
+		@include review-responsive-breakpoint;
+
+		@media only screen and (max-width: $bp-6) {
+			grid-row: 2 / 3;
+		}
 	}
 
 	&__article{
@@ -124,8 +139,8 @@
 	}
 
 	&__partnership{
-		width: 91.1%;
-		grid-column: col-start 5 / full-end;
+		width: 91.5%;
+		grid-column: col-start 3 / full-end;
 		background-color: $color-secondary;
 		justify-self: end;
 
@@ -156,6 +171,18 @@
 				justify-self: center;
 				align-self: start;
 				@extend %hover-news-animation;
+
+				@media only screen and (max-width: $bp-6) {
+					grid-row: 3 / 4;
+					grid-column: 1 / 2;
+					justify-self: start;
+				}
+			}
+
+			@media only screen and (max-width: $bp-6) {
+				width: 100%;
+				transform: translateY(20%);
+				grid-column: col-start 3 / -1;
 			}
 	}
 }

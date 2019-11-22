@@ -2,9 +2,9 @@
 	background-color: $color-white;
 	position: fixed;
 		
-	z-index: 10000;
+	z-index: 100;
 
-	width: 100vw;
+	width: 100%;
 	height: 8rem;
 
 	display: flex;
@@ -24,6 +24,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		@media only screen and (max-width: $bp-6) {
+			display: none;
+		}
 	}
 	
 	&__list{
@@ -82,5 +86,38 @@
 			animation: moveInBottom .5s ease-out .75s; /*.75 задержка*/
 			animation-fill-mode: backwards; 
 		}
+	}
+
+	// Navigation btn
+	&__btn-link{
+		align-self: center;
+		display: none;
+
+		@media only screen and (max-width: $bp-6) {
+			display: inline-block;
+		}
+	}
+	&__btn{
+		position: relative;
+		width: 3rem;
+		height: .2rem;
+		background-color: $color-secondary;
+		margin-right: 11vw;
+
+		&::before,
+		&::after{
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: .2rem;
+			background-color: $color-secondary;
+			left: 0;
+			top: -1rem;
+		}
+
+		&::after{
+			top: calc(100% + .8rem);
+		}
+
 	}
 }

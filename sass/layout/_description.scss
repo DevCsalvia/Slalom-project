@@ -10,10 +10,16 @@
 
 	&__heading{
 		grid-column: col-start 3 / col-end 8;
+		grid-row: 1 / 2;
+
+		@include responsive-media;
 	}
 
 	&__content{
 		grid-column: col-start 3 / col-end 8;
+		grid-row: 2 / 3;
+
+		@include responsive-media;	
 
 		&-heading{
 		}
@@ -25,6 +31,9 @@
 
 	&__link{
 		grid-column: col-start 3 / col-end 8;
+		grid-row: 3 / 4;
+		
+		@include responsive-media;
 	}
 
 	&__img-1{
@@ -42,33 +51,91 @@
 
 		clip-path: circle(96.0% at 96% 4%);
 
-		transform: translateY(-55%);
+		transform: translateY(-20rem);
+
+		@media only screen and (max-width: $bp-1) {
+			width: 18vw;
+			height: 18vw;
+		}
+
+		@media only screen and (max-width: $bp-3) {
+			width: 17.8vw;
+			height: 17.8vw;
+		}
+
+		@media only screen and (max-width: $bp-4) {
+			transform: translate(3rem, -20rem);
+			width: 22.5vw;
+			height: 22.5vw;
+		}
+
+		@media only screen and (max-width: $bp-6) {
+			grid-column: 8 / 10;
+			transform: translate(2rem, -10rem);
+		}
+
+		@media only screen and (max-width: $bp-7) {
+			width: 27vw;
+			height: 27vw;
+			transform: translate(5rem, -10rem);
+		}
 	}
 
 	&__img-2{
 		//@extend %image;
 
 		grid-column: col-start 9 / -1;
-		grid-row: 1 / 4;
+		grid-row: 2 / 3;
 
 		justify-self: end;
 		align-self: center;
 
-		width: 25vw;
-		height: 25vw;
+		width: 22.5vw;
+		height: 22.5vw;
 		object-fit: cover;
-		
+
+		transform: translateX(2rem);
+
 		border-radius: 50%;
+
+		@media only screen and (max-width: $bp-1) {
+			width: 22.5vw;
+			height: 22.5vw;
+			transform: translateX(3.5rem);
+		}
+
+		@media only screen and (max-width: $bp-4) {
+			width: 28vw;
+			height: 28vw;
+		}
+
+		@media only screen and (max-width: $bp-6) {
+			display: none;
+		}
+		
 	}
 
 	&__img-3{
 		//@extend %image;
-		top: 75%;
-
 		position: absolute;
 
-		width: 25vw;
+		top: 80%;
 
-		transform: translateX(2%);
+		width: 25vw;
+		
+		transform: translateX(1rem);
+
+		@media only screen and (max-width: $bp-1) {
+			top: 85%;
+			width: 30vw;
+		}
+
+		@media only screen and (max-width: $bp-4) {
+			width: 35vw;
+		}
+
+		@media only screen and (max-width: $bp-6) {
+			display: none;
+		}
 	}
 }

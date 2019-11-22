@@ -2,6 +2,7 @@
 	background-color: $color-grey-light-1;
 	padding: 7rem 0;
 
+
 	&__heading{
 		grid-column: center-start / center-end;
 		align-self: center;
@@ -9,10 +10,8 @@
 		transition: all $main-transition;
 
 		border-radius: $border-radius-primary $border-radius-primary 0 0;
-		&:hover{
-			//box-shadow: $primary-shadow;
-			//margin-top: $top-btn-move;
-		}
+
+		@include responsive-breakpoint-style;
 	}
 
 	&__link{
@@ -22,9 +21,13 @@
 
 	&__text{
 		grid-column: center-start / center-end;
+
+		@include responsive-breakpoint-style;
 	}
 
 	&__btn{
 		grid-column: center-start / center-end;
+
+		@include responsive-breakpoint-style;
 	}
 }

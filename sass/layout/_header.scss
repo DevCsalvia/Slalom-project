@@ -20,31 +20,34 @@
 		grid-column: center-start / center-end;
 		display: flex;
 		flex-direction: column;
+
+		@include header-responsive-breakpoint;
 	}
 
 	&__heading-1{
-		margin-top: 4rem;
+		//margin-top: 4rem;
 		//margin-left: 10%;
 
 	//animation appear from bottom
 	animation: moveInBottom .5s ease-out .75s; /*.75 задержка*/
 		animation-fill-mode: backwards; 
 
-
 	}
 
 	&__heading-2{
 		align-self: flex-end;
 		//margin-right: 10%;
-		margin-top: -2rem;
-	//animation appear from right
-	animation: moveInRight .5s ease-out .75s; /*.75 задержка*/
+		//margin-top: -2rem;
+		//animation appear from right
+		animation: moveInRight .5s ease-out .75s; /*.75 задержка*/
 		animation-fill-mode: backwards; 
 	}
 
 	&__seenon-text{
 		grid-row: logo-start / logo-end;
 		grid-column: col-start 1 / col-end 10;
+
+		@include header-responsive-breakpoint;
 		
 		justify-self: stretch;
 		align-self: start;
@@ -70,11 +73,19 @@
 	&__seenon-logos{
 		grid-row: logo-start / logo-end;
 		grid-column: col-start 1 / col-end 10;
+
+		@include header-responsive-breakpoint;
 		
 		justify-self: stretch;
 
-		display: flex;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+		justify-items: center;
+		grid-column-gap: $small-column-gap;		
+
+		@media only screen and (max-width: $bp-5) {
+			grid-column-gap: $smallest-column-gap;
+		}
 		
 	}
 
@@ -87,5 +98,15 @@
 		//animation appear from left
 		animation: moveInLeft .5s ease-out .75s; /*.75 задержка*/
 		animation-fill-mode: backwards; 
+		
+		@media only screen and (max-width: $bp-5) {
+			width: 6rem;
+			height: 6rem;
+		}
+
+		@media only screen and (max-width: $bp-6) {
+			width: 4rem;
+			height: 4rem;
+		}
 	}
 }

@@ -1,0 +1,27 @@
+.section-projects{
+	padding: $section-padding;
+
+		&__cards-container{
+			grid-column: center-start / center-end;
+
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(29.5rem, 1fr));
+			grid-gap: $card-gap;
+
+			@media only screen and (max-width: $bp-6) {
+				grid-column: $medium-grid-column;
+				grid-column-gap: $small-column-gap;
+				grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+
+				& > * {
+					width: 60%;
+					justify-self: center;
+					//margin-left: -10%;
+
+					@media only screen and (max-width: $bp-7) {
+						width: 75%;
+					}
+				}
+			}
+		}
+	}
