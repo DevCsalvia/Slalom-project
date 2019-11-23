@@ -3,7 +3,7 @@
 						   repeat(10, [col-start] minmax(min-content, 11.4rem)
 						   [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
 
-	@media only screen and (min-resolution: 192dpi) and (max-width: $bp-3) {
+	@media only screen and (max-width: $bp-3) {
 			grid-template-columns:[full-start] minmax(3rem, 1fr) [center-start]
 						   repeat(10, [col-start] minmax(min-content, 11.4rem)
 						   [col-end]) [center-end] minmax(3rem, 1fr) [full-end];
@@ -19,7 +19,7 @@
 						   minmax(min-content, 114rem) [center-end] minmax(6rem, 1fr) [full-end]; 
 	//margin-bottom: 100vh;
 
-	@media only screen and (min-resolution: 192dpi) and (max-width: $bp-3) {
+	@media only screen and (max-width: $bp-3) {
 			grid-template-rows: 8rem [header-start] calc(90vh - 8rem) [header-end] repeat(6, [row-start] min-content [row-end]);
 		}
 
@@ -47,7 +47,7 @@
 		justify-items: start;
 		grid-row-gap: $row-gap;
 
-		@media only screen and (min-resolution: 192dpi) and (max-width: $bp-6) {
+		@media only screen and (max-width: $bp-6) {
 			grid-row-gap: $small-row-gap;
 		}
 	}
@@ -73,8 +73,9 @@
 
 		padding: $section-padding-medium;
 
-		@media only screen and (min-resolution: 192dpi) and (max-width: $bp-6) {
+		@media only screen and (max-width: $bp-6) {
 			padding: $section-padding-small;
+			grid-column-gap: 0;
 		}
 	}
 
@@ -84,13 +85,15 @@
 
 		display: grid;
 		@extend %main-grid-columns;
+		align-items: start;
+		justify-items: start;
 		grid-column-gap: $column-gap;
 		grid-row-gap: $big-row-gap;
 		padding: $section-padding;
 		padding-bottom: 0;
 
-		@media only screen and (min-resolution: 192dpi) and (max-width: $bp-6) {
-			grid-column-gap: $small-column-gap;
+		@media only screen and (max-width: $bp-6) {
+			grid-column-gap: 0;
 		}
 	}
 
@@ -119,8 +122,9 @@
 
 		background-color: $color-grey-dark-4;
 
-		@media only screen and (min-resolution: 192dpi) and (max-width: $bp-8) {
+		@media only screen and (max-width: $bp-8) {
 			grid-row-gap: $medium-row-gap;
+			grid-column-gap: 0;
 		}
 	}
 }

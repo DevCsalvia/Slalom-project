@@ -1030,7 +1030,7 @@ body {
 
 .container .header, .container .section-work, .container .section-projects, .container .section-description, .container .section-reviews, .container .section-careers, .container .footer {
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 11.4rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
-  @media only screen and (min-resolution: 192dpi) and (max-width: 68.75em) {
+  @media only screen and (max-width: 68.75em) {
     .container .header, .container .section-work, .container .section-projects, .container .section-description, .container .section-reviews, .container .section-careers, .container .footer {
       grid-template-columns: [full-start] minmax(3rem, 1fr) [center-start] repeat(10, [col-start] minmax(min-content, 11.4rem) [col-end]) [center-end] minmax(3rem, 1fr) [full-end]; } }
 
@@ -1038,7 +1038,7 @@ body {
   display: grid;
   grid-template-rows: 8rem [header-start] calc(100vh - 8rem) [header-end] repeat(6, [row-start] min-content [row-end]);
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] minmax(min-content, 114rem) [center-end] minmax(6rem, 1fr) [full-end]; }
-  @media only screen and (min-resolution: 192dpi) and (max-width: 68.75em) {
+  @media only screen and (max-width: 68.75em) {
     .container {
       grid-template-rows: 8rem [header-start] calc(90vh - 8rem) [header-end] repeat(6, [row-start] min-content [row-end]); } }
   .container .header {
@@ -1055,7 +1055,7 @@ body {
     grid-template-rows: minmax(min-content, 4.5rem);
     justify-items: start;
     grid-row-gap: 4rem; }
-    @media only screen and (min-resolution: 192dpi) and (max-width: 53.125em) {
+    @media only screen and (max-width: 53.125em) {
       .container .section-work {
         grid-row-gap: 1.5rem; } }
   .container .section-projects {
@@ -1070,20 +1070,23 @@ body {
     justify-items: start;
     grid-column-gap: 1.5rem;
     padding: 15rem 0; }
-    @media only screen and (min-resolution: 192dpi) and (max-width: 53.125em) {
+    @media only screen and (max-width: 53.125em) {
       .container .section-description {
-        padding: 5rem 0; } }
+        padding: 5rem 0;
+        grid-column-gap: 0; } }
   .container .section-reviews {
     grid-row: row-start 4 / row-end 4;
     grid-column: full-start / full-end;
     display: grid;
+    align-items: start;
+    justify-items: start;
     grid-column-gap: 4rem;
     grid-row-gap: 8rem;
     padding: 10rem 0;
     padding-bottom: 0; }
-    @media only screen and (min-resolution: 192dpi) and (max-width: 53.125em) {
+    @media only screen and (max-width: 53.125em) {
       .container .section-reviews {
-        grid-column-gap: 1.5rem; } }
+        grid-column-gap: 0; } }
   .container .section-careers {
     grid-row: row-start 5 / row-end 5;
     grid-column: center-start / center-end;
@@ -1098,6 +1101,7 @@ body {
     grid-row-gap: 12rem;
     padding: 5rem 0;
     background-color: #222; }
-    @media only screen and (min-resolution: 192dpi) and (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .container .footer {
-        grid-row-gap: 6rem; } }
+        grid-row-gap: 6rem;
+        grid-column-gap: 0; } }
