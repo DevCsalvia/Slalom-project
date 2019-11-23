@@ -1,7 +1,7 @@
 .header{
 	background-image: linear-gradient(to right bottom, 
 		rgba($color-secondary-light, 0.7),
-		rgba($color-secondary-dark, 0.7)), url(../img/header.jpg);
+		rgba($color-secondary-dark, 0.7)), url(../img/header-small.jpg);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -13,6 +13,15 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;*/
+
+	@media only screen and (min-width: $bp-5),
+		   only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: $bp-5),
+		   only screen and (min-width: $bp-0) {
+								background-image: linear-gradient(to right bottom, 
+								rgba($color-secondary-light, 0.7),
+								rgba($color-secondary-dark, 0.7)),
+								 url('../img/header.jpg');
+							}
 
 	&__text{
 		//margin-top: -8rem;
@@ -79,7 +88,7 @@
 		justify-self: stretch;
 
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(4rem, 1fr));
 		justify-items: center;
 		grid-column-gap: $small-column-gap;		
 
@@ -91,8 +100,8 @@
 
 	&__seenon-icon{
 		display: inline-block;
-		width: 8rem;
-		height: 8rem;
+		width: 9rem;
+		height: 9rem;
 		fill: $color-grey-light-2;
 
 		//animation appear from left
@@ -100,13 +109,13 @@
 		animation-fill-mode: backwards; 
 		
 		@media only screen and (max-width: $bp-5) {
-			width: 6rem;
-			height: 6rem;
+			width: 7rem;
+			height: 7rem;
 		}
 
 		@media only screen and (max-width: $bp-6) {
-			width: 4rem;
-			height: 4rem;
+			width: 5rem;
+			height: 5rem;
 		}
 	}
 }

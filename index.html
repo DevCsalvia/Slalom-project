@@ -26,6 +26,14 @@
 				<img src="img/logo.png" alt="Slalom logo">
 			</a>
 			
+			<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+			
+			<label for="navi-toggle" class="navigation__button">
+				<span class="navigation__icon">&nbsp;</span>
+			</label>
+
+			<div class="navigation__background">&nbsp;</div>
+
 			<nav class="navigation__nav">
 				<ul class="navigation__list">
 					<li class="navigation__item"><a href="#" class="navigation__link btn-text">Что мы делаем</a></li>
@@ -42,15 +50,11 @@
 				</div>
 			</nav>
 
-			<a href="#" class="navigation__btn-link">
+			
+
+			<!--<a href="#" class="navigation__btn-link">
 				<div class="navigation__btn"></div>
-			</a>
-
-			<!--<input type="checkbox" class="navigation__checkbox" id="navi-toggle">
-
-			<label for="navi-toggle" class="navigation__button">
-				<span class="navigation__icon">&nbsp;</span>
-			</label>-->
+			</a>-->
 		</div>
 	
 <!--Header content-->
@@ -125,7 +129,11 @@
 			<section class="section-projects">
 				<div class="section-projects__cards-container">
 					<div class="card section-projects__card-1">
-						<img src="img/img-1.jpg" alt="Image-1" class="card__image">
+
+						<img srcset="img/img-1-small.jpg 1x, img/img-1.jpg 2x" 
+							 alt="Image-1" 
+							 class="card__image"
+							 src="img/img-1.jpg">
 						
 						<svg class="card__like">
 		                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
@@ -139,7 +147,12 @@
 					</div>
 
 					<div class="card section-projects__card-2">
-						<img src="img/img-2.jpg" alt="Image-2" class="card__image">
+
+						<img srcset="img/img-2-small.jpg 1x, img/img-2.jpg 2x" 
+							 alt="Image-2" 
+							 class="card__image"
+							 src="img/img-2.jpg">
+
 						<svg class="card__like">
 		                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 		                </svg>
@@ -152,7 +165,12 @@
 					</div>
 
 					<div class="card section-projects__card-3">
-						<img src="img/img-3.jpg" alt="Image-3" class="card__image">
+
+						<img srcset="img/img-3-small.jpg 1x, img/img-3.jpg 2x" 
+							 alt="Image-3" 
+							 class="card__image"
+							 src="img/img-3.jpg">
+
 						<svg class="card__like">
 		                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 		                </svg>
@@ -165,7 +183,12 @@
 					</div>
 
 					<div class="card section-projects__card-4">
-						<img src="img/img-4.jpg" alt="Image-4" class="card__image">
+
+						<img srcset="img/img-4-small.jpg 1x, img/img-4.jpg 2x" 
+							 alt="Image-4" 
+							 class="card__image"
+							 src="img/img-4.jpg">
+
 						<svg class="card__like">
 		                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 		                </svg>
@@ -178,7 +201,12 @@
 					</div>
 
 					<div class="card section-projects__card-5">
-						<img src="img/img-5.jpg" alt="Image-5" class="card__image">
+
+						<img srcset="img/img-5-small.jpg 1x, img/img-5.jpg 2x" 
+							 alt="Image-5" 
+							 class="card__image"
+							 src="img/img-5.jpg">
+
 						<svg class="card__like">
 		                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 		                </svg>
@@ -191,7 +219,12 @@
 					</div>
 
 					<div class="card section-projects__card-6">
-						<img src="img/img-6.jpg" alt="Image-6" class="card__image">
+
+						<img srcset="img/img-6-small.jpg 1x, img/img-6.jpg 2x" 
+							 alt="Image-6" 
+							 class="card__image"
+							 src="img/img-6.jpg">
+
 						<svg class="card__like">
 		                    <use xlink:href="img/symbol-defs.svg#icon-heart"></use>
 		                </svg>
@@ -209,15 +242,27 @@
 			<section class="section-description">
 				<h3 class="section-description__heading heading-tertiary u-margin-bottom-small"><a href="#" class="section-description__heading-link btn-text">Кто мы</a></h3>
 				<div class="section-description__content u-margin-bottom-medium">
-					<h2 class="heading-secondary section-description__content-heading u-margin-bottom-medium">Мы, прежде всего, ориентированные на людей консультанты, стратеги и инженеры.</h2>
+					<h2 class="heading-secondary section-description__content-heading u-margin-bottom-medium">Мы, прежде всего, ориентированные на&nbsp;людей консультанты, стратеги и инженеры.</h2>
 						<p class="section-description__content-text">
 							Команды Slalom стремятся делать то, что правильно, и помогают вам реализовать свое видение. Мы верим в совместное достижение успеха, улучшение вашей организации после каждого взаимодействия и укрепление доверия к следующей большой задаче.
 						</p>
 				</div>
 				<a href="#" class="btn section-description__link u-margin-bottom-medium">Наша команда</a>
-				<img src="img/img-7.jpg" alt="Description img-1" class="section-description__img-1">
-				<img src="img/img-8.jpg" alt="Description img-2" class="section-description__img-2">
-				<img src="img/img-9.jpg" alt="Description img-3" class="section-description__img-3">
+
+				<img srcset="img/img-7-small.jpg 1x, img/img-7.jpg 2x" 
+							 alt="Description img-1" 
+							 class="section-description__img-1"
+							 src="img/img-7.jpg">
+
+				<img srcset="img/img-8-small.jpg 1x, img/img-8.jpg 2x" 
+							 alt="Description img-8" 
+							 class="section-description__img-2"
+							 src="img/img-8.jpg">
+
+				<img srcset="img/img-9-small.jpg 1x, img/img-9.jpg 2x" 
+							 alt="Description img-9" 
+							 class="section-description__img-3"
+							 src="img/img-9.jpg">
 			</section>
 
 			<section class="section-reviews">
@@ -249,13 +294,25 @@
 				<div class="section-reviews__articles">
 					<div class="secton-reviews__article">
 						<a href="#" class="section-reviews__article-link">Статья
-							<img src="img/img-10.jpg" class="section-reviews__article-img" alt="Img 10">
+							
+							<img srcset="img/img-10-small.jpg 900w, img/img-10.jpg 1920w" 
+							 sizes="(max-width: 56.25em) 45.6vw, (max-width: 37.5em) 41.3vw, 900px"
+							 alt="Image 10" 
+							 class="section-reviews__article-img"
+							 src="img/img-10.jpg">
+
 							<h3 class="section-reviews__article-heading heading-tertiary">Переход к безошибочной бизнес-стратегии</h3>
 						</a>
 					</div>
 					<div class="secton-reviews__article">
 						<a href="#" class="section-reviews__article-link">whitepaper
-							<img src="img/img-11.jpg" class="section-reviews__article-img" alt="Img 11">
+
+							<img srcset="img/img-11-small.jpg 900w, img/img-11.jpg 1920w" 
+							 sizes="(max-width: 56.25em) 45.6vw, (max-width: 37.5em) 41.3vw, 900px"
+							 alt="Image 11" 
+							 class="section-reviews__article-img"
+							 src="img/img-11.jpg">
+
 							<h3 class="section-reviews__article-heading heading-tertiary">Четыре столпа межканальной персонализации</h3>
 						</a>
 					</div>
@@ -273,7 +330,7 @@
 					<div class="section-careers__heading">
 						<h2 class="heading-secondary">Ваше будущее начинается сегодня. Готовы?</h2>
 					</div>
-					<a href="#" class="btn section-careers__link btn--light">Давайте пообщаемся</a>
+					<a href="#" class="btn section-careers__link btn--light">Напишите нам</a>
 				</div>
 			</section>
 

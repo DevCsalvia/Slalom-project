@@ -1,6 +1,7 @@
 .navigation{
 	background-color: $color-white;
 	position: fixed;
+	top: 0;
 		
 	z-index: 100;
 
@@ -16,24 +17,59 @@
 		img{
 			width: 8rem;
 		}
-		margin-left: 11%;
+		margin-left: 8%;
+
+		@media only screen and (max-width: $bp-1) {
+			margin-left: 2%;
+		}
+
+		@media only screen and (max-width: $bp-6) {
+			margin-left: 8%;
+		}
 	}
 
 	&__nav{
-		margin-right: 11%;
+		margin-right: 8%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 
-		@media only screen and (max-width: $bp-6) {
-			display: none;
+		@media only screen and (max-width: $bp-1) {
+			margin-right: 2%;
 		}
+
+		@media only screen and (max-width: $bp-6) {
+			//display: none;
+			margin-right: 0;
+
+			flex-direction: column;
+			justify-content: center;
+			
+
+			position: fixed;
+			top: -60%;
+			z-index: 1500;
+			opacity: 0;
+
+			height: 0;
+			width: 100%;
+			transition: all .8s;
+		}
+
 	}
 	
 	&__list{
 		display: flex;
 		margin-right: 1rem;
 		//border: 1px solid red;
+
+
+		@media only screen and (max-width: $bp-6) {
+			align-items: center;
+			flex-direction: column;
+			width: 100%;
+		}
+		
 	}
 
 	&__item{
@@ -46,11 +82,19 @@
 
 		&:hover{
 			margin-top: $top-btn-move;
+
+			@media only screen and (max-width: $bp-6) {
+				margin-top: 0 ;
+			}
 		}
 
 		//animation appear from left
 		animation: moveInLeft .5s ease-out .75s; /*.75 задержка*/
 		animation-fill-mode: backwards; 
+
+		@media only screen and (max-width: $bp-6) {
+			margin-bottom: $margin-bottom;
+		}
 	}
 
 	&__link{
@@ -63,6 +107,16 @@
 		&:hover{
 			box-shadow: $primary-shadow-light;
 		}
+
+		@media only screen and (max-width: $bp-6){
+			&:link,
+			&:visited{
+				display: inline-block;
+				padding: 1rem 2rem;
+				color: $color-primary;
+				transition: all $main-transition;
+			}
+		}
 	}
 
 //style icon
@@ -72,6 +126,10 @@
 		display: flex;
 		align-items: center;
 
+		@media only screen and (max-width: $bp-6) {
+				margin-left: -20rem;
+			} 
+
 		&-icon{
 			width: 2.25rem;
 			height: 2.25rem;
@@ -80,11 +138,22 @@
 
 			&:hover{
 				fill: $color-secondary-light;
+
+				@media only screen and (max-width: $bp-6) {
+					fill: $color-primary-light;
+				} 
 			}
 
 			//animation appear from left
 			animation: moveInBottom .5s ease-out .75s; /*.75 задержка*/
-			animation-fill-mode: backwards; 
+			animation-fill-mode: backwards;
+
+			@media only screen and (max-width: $bp-6) {
+				width: 10rem;
+				height: 10rem;
+
+				fill: $color-primary;
+			} 
 		}
 	}
 
@@ -97,7 +166,101 @@
 			display: inline-block;
 		}
 	}
-	&__btn{
+
+////////////////NAVIGATION BTN_TOGGLE///////////////////////////////
+
+	&__checkbox {
+		display: none;
+	}
+
+	&__button {
+		display: none;
+
+		height: 7rem;
+		width: 7rem;
+		border-radius: 50%;
+		z-index: 2000;
+		text-align: center;
+		cursor: pointer;
+		align-self: center;
+		margin-right: 8%;
+
+		@media only screen and (max-width: $bp-6) {
+			display: block;
+		}
+	}
+
+	&__background {
+		display: none;
+
+		height: 6rem;
+		width: 6rem;
+		border-radius: 50%;
+		background-image: radial-gradient($color-secondary-light, $color-secondary-dark);
+		z-index: 1000;
+		transition: transform $slow-main-transition;
+		position: absolute;
+		left: calc(50% - 3rem);
+		top: -6.5rem;
+
+		@media only screen and (max-width: $bp-6) {
+			display: block;
+		}
+	}
+
+	//FUNCTIONALITY
+	&__checkbox:checked ~ &__background {
+		transform: scale(80);
+	}
+
+	&__checkbox:checked ~ &__nav {
+		opacity: 1;
+		height: 100vh;
+		top: 0;
+	}
+
+	//ICON
+	&__icon {
+		position: relative;
+		margin-top: 3.5rem;
+		&,
+		&::before,
+		&::after {
+			width: 4rem;
+			height: 2px;
+			background-color: $color-secondary;
+			display: inline-block;
+		}
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			transition: all .2s;
+		}
+
+		&::before { top: -1rem;}
+		&::after { top: 1rem; }
+	}
+
+	&__checkbox:checked + &__button &__icon {
+		background-color: transparent;
+	}
+
+	&__checkbox:checked + &__button &__icon::before {
+		top: 0;
+		transform: rotate(135deg);
+		background-color: $color-white;
+	}
+
+	&__checkbox:checked + &__button &__icon::after {
+		top: 0;
+		transform: rotate(-135deg);
+		background-color: $color-white;
+	}
+
+	/*&__btn{
 		position: relative;
 		width: 3rem;
 		height: .2rem;
@@ -118,6 +281,5 @@
 		&::after{
 			top: calc(100% + .8rem);
 		}
-
-	}
+	}*/
 }

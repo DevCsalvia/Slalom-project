@@ -64,20 +64,28 @@
 		}
 
 		@media only screen and (max-width: $bp-4) {
-			transform: translate(3rem, -20rem);
-			width: 22.5vw;
-			height: 22.5vw;
+			transform: translate(1rem, -20rem);
+			width: 18vw;
+			height: 18vw;
 		}
 
 		@media only screen and (max-width: $bp-6) {
-			grid-column: 8 / 10;
-			transform: translate(2rem, -10rem);
+			grid-column: 9 / 11;
+			transform: translate(0, -10rem);
+			width: 20vw;
+			height: 20vw;
 		}
 
 		@media only screen and (max-width: $bp-7) {
+			grid-column: 8 / 10;
 			width: 27vw;
 			height: 27vw;
 			transform: translate(5rem, -10rem);
+		}
+
+		@media only screen and (max-width: $bp-9) {
+			width: 34vw;
+			height: 34vw;
 		}
 	}
 
@@ -105,8 +113,9 @@
 		}
 
 		@media only screen and (max-width: $bp-4) {
-			width: 28vw;
-			height: 28vw;
+			width: 26vw;
+			height: 26vw;
+			transform: translateX(10.5rem);
 		}
 
 		@media only screen and (max-width: $bp-6) {

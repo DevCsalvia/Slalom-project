@@ -39,3 +39,10 @@
 			grid-column: $medium-grid-column;
 		}
 }
+
+/////////////////FOOTER SECTION MEDIA MIXIN////////////////////////////////////////
+@mixin footer-responsive-breakpoint{
+	@media only screen and (max-width: $bp-6) {
+			grid-column: $medium-grid-column;
+		}
+}
